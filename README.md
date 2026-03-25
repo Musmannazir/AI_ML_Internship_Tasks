@@ -272,21 +272,6 @@ git branch -M main
 git push -u origin main
 ```
 
-### Files Safe to Commit
-
-✅ All `.py` files  
-✅ All `.csv` files  
-✅ Generated plots and outputs  
-✅ `README.md`  
-✅ `.gitignore`  
-
-### Files NOT to Commit
-
-❌ `.env` (contains API keys) - covered by `.gitignore`  
-❌ `__pycache__/` - covered by `.gitignore`  
-❌ `.pyc` files - covered by `.gitignore`  
-❌ Virtual environment folder - covered by `.gitignore`  
-
 ## Author
 
 Muhammad Usman Nazir

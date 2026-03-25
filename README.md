@@ -27,7 +27,6 @@ Internship_Tasks/
 │       └── feature_importance.csv
 ├── Task_4/
 │   └── task4_health_chatbot.py
-├── .env.example
 ├── .gitignore
 └── README.md
 ```
@@ -62,13 +61,8 @@ pip install pandas matplotlib seaborn scikit-learn yfinance requests
 
 ### Optional: API Keys for Task 4
 
-For Task 4 (Health Chatbot), you can optionally use your own API keys. Create a `.env` file:
+For Task 4 (Health Chatbot), you can optionally use your own API keys. Create a `.env` file in the project root:
 
-```bash
-cp .env.example .env
-```
-
-Then add your keys to `.env` (or leave empty to use local mode with no API):
 ```
 OPENAI_API_KEY=your_openai_key_here
 HF_API_KEY=your_huggingface_key_here
@@ -285,7 +279,6 @@ git push -u origin main
 ✅ Generated plots and outputs  
 ✅ `README.md`  
 ✅ `.gitignore`  
-✅ `.env.example` (has no secrets)  
 
 ### Files NOT to Commit
 

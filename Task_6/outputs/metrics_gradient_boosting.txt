@@ -1,0 +1,5 @@
+Model: gradient_boosting
+MAE: 732686.25
+RMSE: 1025818.01
+R2: 0.7122
+MAPE (%): 15.88

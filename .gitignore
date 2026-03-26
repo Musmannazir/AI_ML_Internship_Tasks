@@ -62,6 +62,12 @@ htmlcov/
 *.log
 logs/
 
+# Task 5 local artifacts
+Task_5/fine_tuned_model/
+Task_5/model_cache/
+Task_5/*.pt
+Task_5/*.bin
+
 # OS specific
 Thumbs.db
 .DS_Store

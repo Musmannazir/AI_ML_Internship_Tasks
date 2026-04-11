@@ -7,13 +7,8 @@ This repository contains practical internship tasks focused on data exploration,
 ```text
 Internship_Tasks/
 |-- Task_1/
-|   |-- app.py
-|   |-- requirements.txt
-|   |-- train.py
-|   |-- utils.py
-|   |-- image.png
-|   |-- Result.png
-|   `-- Terminal.png
+|   |-- task1_iris_exploration.py
+|   `-- plots/
 |-- Task_2/
 |   |-- task2_stock_prediction.py
 |   |-- sample_stock_data.csv
@@ -166,13 +161,13 @@ ds = load_dataset("sh0416/ag_news")
 Run training:
 
 ```bash
-python Task_1/train.py --do_train --do_eval --max_train_samples 2000 --max_eval_samples 500 --num_train_epochs 1
+python Task_7/train.py --do_train --do_eval --max_train_samples 2000 --max_eval_samples 500 --num_train_epochs 1
 ```
 
 Run the app:
 
 ```bash
-streamlit run Task_1/app.py
+streamlit run Task_7/app.py
 ```
 
 The trained model is saved to `models/news-topic-bert` by default.

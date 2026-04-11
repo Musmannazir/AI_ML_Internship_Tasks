@@ -31,7 +31,7 @@ Internship_Tasks/
 |   |-- task6_house_price_prediction.py
 |   |-- Housing.csv
 |   `-- outputs/
-|-- Task_7/  (advanced NLP project implementation)
+|-- Task_7_Final_Phase/  (advanced NLP project implementation)
 |   |-- app.py
 |   |-- train.py
 |   |-- utils.py
@@ -161,13 +161,13 @@ ds = load_dataset("sh0416/ag_news")
 Run training:
 
 ```bash
-python Task_7/train.py --do_train --do_eval --max_train_samples 2000 --max_eval_samples 500 --num_train_epochs 1
+python Task_7_Final_Phase/train.py --do_train --do_eval --max_train_samples 2000 --max_eval_samples 500 --num_train_epochs 1
 ```
 
 Run the app:
 
 ```bash
-streamlit run Task_7/app.py
+streamlit run Task_7_Final_Phase/app.py
 ```
 
 The trained model is saved to `models/news-topic-bert` by default.

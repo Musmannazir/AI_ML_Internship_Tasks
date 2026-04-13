@@ -37,7 +37,10 @@ Internship_Tasks/
 |   |-- utils.py
 |   `-- requirements.txt
 |-- Task_8_Final_Phase/
+|   |-- WA_Fn-UseC_-Telco-Customer-Churn.csv
 |   |-- task8_customer_churn_pipeline.py
+|   |-- outputs/
+|   |-- models/
 |   `-- README.md
 |-- requirements.txt
 |-- .gitignore
@@ -182,11 +185,31 @@ The trained model is saved to `models/news-topic-bert` by default.
 - Exports reusable model pipelines with `joblib`
 - Saves model comparison metrics and evaluation reports
 
+Dataset used in this repository:
+
+- `Task_8_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv`
+
 Run:
 
 ```bash
-python Task_8_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_8_Final_Phase/Telco-Customer-Churn.csv
+python Task_8_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_8_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv
 ```
+
+Low-resource run (recommended for laptops):
+
+```bash
+python Task_8_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_8_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv --fast-mode --max-jobs 1 --model logistic_regression
+```
+
+Outputs:
+
+- `Task_8_Final_Phase/outputs/model_comparison.csv`
+- `Task_8_Final_Phase/outputs/logistic_regression_evaluation.json`
+
+Notes:
+
+- `Task_8_Final_Phase/models/` contains exported `.joblib` pipeline files when you run training locally.
+- In this repository, that models directory may be ignored by `.gitignore`, so model binaries may not appear on GitHub.
 
 ## Security Notes
 

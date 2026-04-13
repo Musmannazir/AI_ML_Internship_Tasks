@@ -36,6 +36,9 @@ Internship_Tasks/
 |   |-- train.py
 |   |-- utils.py
 |   `-- requirements.txt
+|-- Task_8_Final_Phase/
+|   |-- task8_customer_churn_pipeline.py
+|   `-- README.md
 |-- requirements.txt
 |-- .gitignore
 `-- README.md
@@ -171,6 +174,19 @@ streamlit run Task_7_Final_Phase/app.py
 ```
 
 The trained model is saved to `models/news-topic-bert` by default.
+
+## Task 8 Final Phase: End-to-End Customer Churn Pipeline
+
+- Builds complete preprocessing + model pipelines with `Pipeline` and `ColumnTransformer`
+- Trains and tunes Logistic Regression and Random Forest using `GridSearchCV`
+- Exports reusable model pipelines with `joblib`
+- Saves model comparison metrics and evaluation reports
+
+Run:
+
+```bash
+python Task_8_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_8_Final_Phase/Telco-Customer-Churn.csv
+```
 
 ## Security Notes
 

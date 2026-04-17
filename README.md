@@ -42,6 +42,18 @@ Internship_Tasks/
 |   |-- outputs/
 |   |-- models/
 |   `-- README.md
+|-- Task_9_FInal_Phase/
+|   |-- task9_multimodal_housing_prediction.py
+|   |-- README.md
+|   `-- outputs/
+|-- Task_10_Final_Phase/
+|   |-- app.py
+|   |-- build_index.py
+|   |-- rag_engine.py
+|   |-- README.md
+|   |-- requirements.txt
+|   |-- knowledge_base/
+|   `-- vector_store/
 |-- requirements.txt
 |-- .gitignore
 `-- README.md
@@ -211,6 +223,61 @@ Notes:
 - `Task_8_Final_Phase/models/` contains exported `.joblib` pipeline files when you run training locally.
 - In this repository, that models directory may be ignored by `.gitignore`, so model binaries may not appear on GitHub.
 
+## Task 9: Multimodal Housing Price Prediction (Images + Tabular)
+
+- Extracts visual features from house images using a CNN (ResNet18)
+- Processes structured features from housing CSV data
+- Fuses both modalities for regression
+- Evaluates performance using MAE and RMSE
+- Uses KaggleHub dataset: `ted8080/house-prices-and-images-socal`
+
+Run:
+
+```bash
+python Task_9_FInal_Phase/task9_multimodal_housing_prediction.py --dataset-source kagglehub --kaggle-dataset ted8080/house-prices-and-images-socal --target-column price --epochs 15
+```
+
+Dataset download snippet:
+
+```python
+import kagglehub
+
+path = kagglehub.dataset_download("ted8080/house-prices-and-images-socal")
+print("Path to dataset files:", path)
+```
+
+Outputs:
+
+- `Task_9_FInal_Phase/outputs/multimodal_metrics.json`
+- `Task_9_FInal_Phase/outputs/actual_vs_predicted_multimodal.csv`
+- `Task_9_FInal_Phase/outputs/training_loss_curve.png`
+- `Task_9_FInal_Phase/outputs/actual_vs_predicted_plot.png`
+- `Task_9_FInal_Phase/outputs/multimodal_regressor.pt`
+
+## Task 10: Context-Aware Chatbot Using RAG + Streamlit
+
+- Builds a retrieval-based conversational chatbot
+- Maintains chat context using conversation memory
+- Retrieves relevant chunks from a vectorized document store
+- Deploys an interactive chatbot UI with Streamlit
+
+Build index:
+
+```bash
+python Task_10_Final_Phase/build_index.py --corpus-dir Task_10_Final_Phase/knowledge_base --index-path Task_10_Final_Phase/vector_store/index.npz
+```
+
+Run app:
+
+```bash
+python -m streamlit run Task_10_Final_Phase/app.py
+```
+
+Main files:
+
+- `Task_10_Final_Phase/rag_engine.py`
+- `Task_10_Final_Phase/build_index.py`
+- `Task_10_Final_Phase/app.py`
 ## Security Notes
 
 - Do not commit .env or API keys

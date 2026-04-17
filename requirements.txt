@@ -14,3 +14,16 @@ joblib>=1.2.0
 # torch>=2.0.0
 # accelerate>=0.20.0
 # streamlit>=1.20.0  # For web interface
+
+# Task 9: Multimodal Housing Price Prediction (Optional)
+# Uncomment for CNN image + tabular fusion training
+# kagglehub>=0.3.0
+# torch>=2.2.0
+# torchvision>=0.17.0
+# pillow>=10.0.0
+
+# Task 10: Context-Aware RAG Chatbot (Optional)
+# Uncomment for retrieval chatbot + Streamlit app
+# sentence-transformers>=3.0.0
+# streamlit>=1.36.0
+# numpy>=1.26.0

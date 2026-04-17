@@ -1,0 +1,11 @@
+Real estate analytics primer
+
+Median sale price is robust to outliers, while average price can be skewed by luxury transactions.
+Price per square foot can be useful for quick comparisons across nearby properties.
+Days-on-market helps estimate listing liquidity and buyer demand.
+
+When building predictive models:
+- Keep train and test periods temporally consistent.
+- Add location proxies such as neighborhood and school quality indices.
+- Evaluate with MAE and RMSE for regression tasks.
+- Document feature drift if market conditions change.

@@ -1,12 +1,12 @@
-"""
+﻿"""
 Task 6: House Price Prediction
 
 Objective:
 Predict house prices using property features such as size, bedrooms, and location.
 
 Run examples:
-    python Task_6/task6_house_price_prediction.py --input-csv Task_6/Housing.csv --model linear
-    python Task_6/task6_house_price_prediction.py --input-csv Task_6/Housing.csv --model gradient_boosting
+    python Task_06/task6_house_price_prediction.py --input-csv Task_06/Housing.csv --model linear
+    python Task_06/task6_house_price_prediction.py --input-csv Task_06/Housing.csv --model gradient_boosting
 """
 
 from __future__ import annotations
@@ -40,7 +40,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--input-csv",
         type=str,
-        default="Task_6/Housing.csv",
+        default="Task_06/Housing.csv",
         help="Path to Kaggle or local house-price CSV file.",
     )
     parser.add_argument(
@@ -285,7 +285,7 @@ def main() -> None:
     print(f"MAPE: {mape:.2f}%")
 
     save_outputs(
-        output_dir=Path("Task_6/outputs"),
+        output_dir=Path("Task_06/outputs"),
         model_name=args.model,
         y_test=y_test,
         y_pred=y_pred,
@@ -298,3 +298,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

@@ -1,4 +1,4 @@
-# AI and ML Internship Tasks
+﻿# AI and ML Internship Tasks
 
 This repository contains practical internship tasks focused on data exploration, predictive modeling, chatbot development, and an advanced NLP project using Python.
 
@@ -6,43 +6,43 @@ This repository contains practical internship tasks focused on data exploration,
 
 ```text
 Internship_Tasks/
-|-- Task_1/
+|-- Task_01/
 |   |-- task1_iris_exploration.py
 |   `-- plots/
-|-- Task_2/
+|-- Task_02/
 |   |-- task2_stock_prediction.py
 |   |-- sample_stock_data.csv
 |   `-- outputs/
-|-- Task_3/
+|-- Task_03/
 |   |-- task3_heart_disease_prediction.py
 |   |-- heart_disease_uci.csv
 |   |-- sample_heart_disease.csv
 |   `-- outputs/
-|-- Task_4/
+|-- Task_04/
 |   `-- task4_health_chatbot.py
-|-- Task_5/
+|-- Task_05/
 |   |-- task5_mental_health_chatbot.py
 |   |-- config.ini
 |   |-- examples.py
 |   |-- README.md
 |   |-- Training.png
 |   `-- UI_Screen.png
-|-- Task_6/
+|-- Task_06/
 |   |-- task6_house_price_prediction.py
 |   |-- Housing.csv
 |   `-- outputs/
-|-- Task_7_Final_Phase/  (advanced NLP project implementation)
+|-- Task_07_Final_Phase/  (advanced NLP project implementation)
 |   |-- app.py
 |   |-- train.py
 |   |-- utils.py
 |   `-- requirements.txt
-|-- Task_8_Final_Phase/
+|-- Task_08_Final_Phase/
 |   |-- WA_Fn-UseC_-Telco-Customer-Churn.csv
 |   |-- task8_customer_churn_pipeline.py
 |   |-- outputs/
 |   |-- models/
 |   `-- README.md
-|-- Task_9_FInal_Phase/
+|-- Task_09_Final_Phase/
 |   |-- task9_multimodal_housing_prediction.py
 |   |-- README.md
 |   `-- outputs/
@@ -70,42 +70,42 @@ Internship_Tasks/
 ## Task 1: Iris Dataset Exploration and Visualization
 
 - Dataset inspection, summary statistics, and visual EDA
-- Outputs saved to Task_1/plots
+- Outputs saved to Task_01/plots
 
 Run:
 
 ```bash
-python Task_1/task1_iris_exploration.py
+python Task_01/task1_iris_exploration.py
 ```
 
 ## Task 2: Stock Price Prediction
 
 - Predict next-day close price using Linear Regression or Random Forest
 - Uses Yahoo Finance or local CSV fallback
-- Outputs saved to Task_2/outputs
+- Outputs saved to Task_02/outputs
 
 Run (live data):
 
 ```bash
-python Task_2/task2_stock_prediction.py --ticker AAPL --period 2y --model random_forest
+python Task_02/task2_stock_prediction.py --ticker AAPL --period 2y --model random_forest
 ```
 
 Run (CSV fallback):
 
 ```bash
-python Task_2/task2_stock_prediction.py --ticker AAPL --model linear --input-csv Task_2/sample_stock_data.csv
+python Task_02/task2_stock_prediction.py --ticker AAPL --model linear --input-csv Task_02/sample_stock_data.csv
 ```
 
 ## Task 3: Heart Disease Prediction
 
 - Binary classification with Logistic Regression or Decision Tree
 - Includes preprocessing, metrics, and feature importance
-- Outputs saved to Task_3/outputs
+- Outputs saved to Task_03/outputs
 
 Run:
 
 ```bash
-python Task_3/task3_heart_disease_prediction.py --model logistic --input-csv Task_3/sample_heart_disease.csv
+python Task_03/task3_heart_disease_prediction.py --model logistic --input-csv Task_03/sample_heart_disease.csv
 ```
 
 ## Task 4: General Health Query Chatbot
@@ -116,7 +116,7 @@ python Task_3/task3_heart_disease_prediction.py --model logistic --input-csv Tas
 Run:
 
 ```bash
-python Task_4/task4_health_chatbot.py
+python Task_04/task4_health_chatbot.py
 ```
 
 ## Task 5: Mental Health Support Chatbot (Fine-Tuned)
@@ -128,32 +128,32 @@ python Task_4/task4_health_chatbot.py
 Run training:
 
 ```bash
-python Task_5/task5_mental_health_chatbot.py --train
+python Task_05/task5_mental_health_chatbot.py --train
 ```
 
 Run chat (CLI):
 
 ```bash
-python Task_5/task5_mental_health_chatbot.py --chat
+python Task_05/task5_mental_health_chatbot.py --chat
 ```
 
 Run web app:
 
 ```bash
-python -m streamlit run Task_5/task5_mental_health_chatbot.py
+python -m streamlit run Task_05/task5_mental_health_chatbot.py
 ```
 
 ## Task 6: House Price Prediction
 
-- Uses Kaggle-style housing data (Task_6/Housing.csv)
+- Uses Kaggle-style housing data (Task_06/Housing.csv)
 - Preprocessing + feature engineering + regression pipelines
 - Supports Linear Regression and Gradient Boosting
-- Outputs saved to Task_6/outputs
+- Outputs saved to Task_06/outputs
 
 Run:
 
 ```bash
-python Task_6/task6_house_price_prediction.py --input-csv Task_6/Housing.csv --model gradient_boosting
+python Task_06/task6_house_price_prediction.py --input-csv Task_06/Housing.csv --model gradient_boosting
 ```
 Install dependencies:
 
@@ -179,13 +179,13 @@ ds = load_dataset("sh0416/ag_news")
 Run training:
 
 ```bash
-python Task_7_Final_Phase/train.py --do_train --do_eval --max_train_samples 2000 --max_eval_samples 500 --num_train_epochs 1
+python Task_07_Final_Phase/train.py --do_train --do_eval --max_train_samples 2000 --max_eval_samples 500 --num_train_epochs 1
 ```
 
 Run the app:
 
 ```bash
-streamlit run Task_7_Final_Phase/app.py
+streamlit run Task_07_Final_Phase/app.py
 ```
 
 The trained model is saved to `models/news-topic-bert` by default.
@@ -199,28 +199,28 @@ The trained model is saved to `models/news-topic-bert` by default.
 
 Dataset used in this repository:
 
-- `Task_8_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv`
+- `Task_08_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv`
 
 Run:
 
 ```bash
-python Task_8_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_8_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv
+python Task_08_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_08_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv
 ```
 
 Low-resource run (recommended for laptops):
 
 ```bash
-python Task_8_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_8_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv --fast-mode --max-jobs 1 --model logistic_regression
+python Task_08_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_08_Final_Phase/WA_Fn-UseC_-Telco-Customer-Churn.csv --fast-mode --max-jobs 1 --model logistic_regression
 ```
 
 Outputs:
 
-- `Task_8_Final_Phase/outputs/model_comparison.csv`
-- `Task_8_Final_Phase/outputs/logistic_regression_evaluation.json`
+- `Task_08_Final_Phase/outputs/model_comparison.csv`
+- `Task_08_Final_Phase/outputs/logistic_regression_evaluation.json`
 
 Notes:
 
-- `Task_8_Final_Phase/models/` contains exported `.joblib` pipeline files when you run training locally.
+- `Task_08_Final_Phase/models/` contains exported `.joblib` pipeline files when you run training locally.
 - In this repository, that models directory may be ignored by `.gitignore`, so model binaries may not appear on GitHub.
 
 ## Task 9: Multimodal Housing Price Prediction (Images + Tabular)
@@ -234,7 +234,7 @@ Notes:
 Run:
 
 ```bash
-python Task_9_FInal_Phase/task9_multimodal_housing_prediction.py --dataset-source kagglehub --kaggle-dataset ted8080/house-prices-and-images-socal --target-column price --epochs 15
+python Task_09_Final_Phase/task9_multimodal_housing_prediction.py --dataset-source kagglehub --kaggle-dataset ted8080/house-prices-and-images-socal --target-column price --epochs 15
 ```
 
 Dataset download snippet:
@@ -248,11 +248,11 @@ print("Path to dataset files:", path)
 
 Outputs:
 
-- `Task_9_FInal_Phase/outputs/multimodal_metrics.json`
-- `Task_9_FInal_Phase/outputs/actual_vs_predicted_multimodal.csv`
-- `Task_9_FInal_Phase/outputs/training_loss_curve.png`
-- `Task_9_FInal_Phase/outputs/actual_vs_predicted_plot.png`
-- `Task_9_FInal_Phase/outputs/multimodal_regressor.pt`
+- `Task_09_Final_Phase/outputs/multimodal_metrics.json`
+- `Task_09_Final_Phase/outputs/actual_vs_predicted_multimodal.csv`
+- `Task_09_Final_Phase/outputs/training_loss_curve.png`
+- `Task_09_Final_Phase/outputs/actual_vs_predicted_plot.png`
+- `Task_09_Final_Phase/outputs/multimodal_regressor.pt`
 
 ## Task 10: Context-Aware Chatbot Using RAG + Streamlit
 
@@ -286,3 +286,4 @@ Main files:
 ## Author
 
 Muhammad Usman Nazir
+

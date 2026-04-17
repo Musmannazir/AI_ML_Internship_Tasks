@@ -1,4 +1,4 @@
-# Task 8 Final Phase: End-to-End ML Pipeline (Customer Churn)
+﻿# Task 8 Final Phase: End-to-End ML Pipeline (Customer Churn)
 
 This task builds a reusable and production-ready churn classification workflow using:
 
@@ -19,16 +19,16 @@ Expected target column:
 From project root:
 
 ```bash
-python Task_8_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_8_Final_Phase/Telco-Customer-Churn.csv
+python Task_08_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_08_Final_Phase/Telco-Customer-Churn.csv
 ```
 
 Optional arguments:
 
 ```bash
-python Task_8_Final_Phase/task8_customer_churn_pipeline.py \
+python Task_08_Final_Phase/task8_customer_churn_pipeline.py \
   --input-csv path/to/Telco-Customer-Churn.csv \
-  --output-dir Task_8_Final_Phase/outputs \
-  --model-dir Task_8_Final_Phase/models \
+  --output-dir Task_08_Final_Phase/outputs \
+  --model-dir Task_08_Final_Phase/models \
   --cv-folds 5 \
   --scoring roc_auc
 ```
@@ -45,15 +45,16 @@ python Task_8_Final_Phase/task8_customer_churn_pipeline.py \
 
 ## Outputs
 
-Saved in `Task_8_Final_Phase/outputs`:
+Saved in `Task_08_Final_Phase/outputs`:
 
 - `model_comparison.csv`
 - `logistic_regression_evaluation.json`
 - `random_forest_evaluation.json`
 
-Saved in `Task_8_Final_Phase/models`:
+Saved in `Task_08_Final_Phase/models`:
 
 - `logistic_regression_pipeline.joblib`
 - `random_forest_pipeline.joblib`
 - `best_churn_pipeline.joblib`
 - `best_model_metadata.json`
+

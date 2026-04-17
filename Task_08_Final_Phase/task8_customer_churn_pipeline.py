@@ -1,4 +1,4 @@
-"""
+﻿"""
 Task 8 Final Phase: End-to-End ML Pipeline with scikit-learn Pipeline API
 
 Objective:
@@ -6,7 +6,7 @@ Build reusable and production-ready churn prediction pipelines with preprocessin
 hyperparameter tuning, and model export.
 
 Run example:
-    python Task_8_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_8_Final_Phase/Telco-Customer-Churn.csv
+    python Task_08_Final_Phase/task8_customer_churn_pipeline.py --input-csv Task_08_Final_Phase/Telco-Customer-Churn.csv
 """
 
 from __future__ import annotations
@@ -44,19 +44,19 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--input-csv",
         type=str,
-        default="Task_8_Final_Phase/Telco-Customer-Churn.csv",
+        default="Task_08_Final_Phase/Telco-Customer-Churn.csv",
         help="Path to Telco Churn CSV file.",
     )
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="Task_8_Final_Phase/outputs",
+        default="Task_08_Final_Phase/outputs",
         help="Directory where metrics and reports will be saved.",
     )
     parser.add_argument(
         "--model-dir",
         type=str,
-        default="Task_8_Final_Phase/models",
+        default="Task_08_Final_Phase/models",
         help="Directory where trained pipeline artifacts are exported.",
     )
     parser.add_argument(
@@ -416,3 +416,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

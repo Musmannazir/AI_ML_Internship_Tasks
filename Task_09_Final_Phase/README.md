@@ -1,4 +1,4 @@
-# Task 9: Multimodal ML - Housing Price Prediction (Images + Tabular)
+﻿# Task 9: Multimodal ML - Housing Price Prediction (Images + Tabular)
 
 This task predicts housing prices by combining:
 
@@ -37,7 +37,7 @@ print("Path to dataset files:", path)
 From project root:
 
 ```bash
-python Task_9_FInal_Phase/task9_multimodal_housing_prediction.py \
+python Task_09_Final_Phase/task9_multimodal_housing_prediction.py \
   --dataset-source kagglehub \
   --kaggle-dataset ted8080/house-prices-and-images-socal \
   --target-column price \
@@ -47,7 +47,7 @@ python Task_9_FInal_Phase/task9_multimodal_housing_prediction.py \
 If the dataset CSV uses an explicit image column, set it manually:
 
 ```bash
-python Task_9_FInal_Phase/task9_multimodal_housing_prediction.py \
+python Task_09_Final_Phase/task9_multimodal_housing_prediction.py \
   --dataset-source kagglehub \
   --kaggle-dataset ted8080/house-prices-and-images-socal \
   --target-column price \
@@ -57,17 +57,17 @@ python Task_9_FInal_Phase/task9_multimodal_housing_prediction.py \
 You can still run with local files (manual paths):
 
 ```bash
-python Task_9_FInal_Phase/task9_multimodal_housing_prediction.py \
+python Task_09_Final_Phase/task9_multimodal_housing_prediction.py \
   --dataset-source local \
   --input-csv Housing.csv \
-  --image-dir Task_9_FInal_Phase/images \
+  --image-dir Task_09_Final_Phase/images \
   --target-column price \
   --image-column image_name
 ```
 
 ## Outputs
 
-Saved in `Task_9_FInal_Phase/outputs` by default:
+Saved in `Task_09_Final_Phase/outputs` by default:
 
 - `multimodal_metrics.json` (contains MAE and RMSE)
 - `actual_vs_predicted_multimodal.csv`
@@ -80,3 +80,4 @@ Saved in `Task_9_FInal_Phase/outputs` by default:
 - The script requires at least 40 rows that successfully map to images.
 - If the script cannot find images, verify naming conventions and selected mapping column.
 - Add `--pretrained-cnn` to start from pretrained ResNet18 weights.
+
